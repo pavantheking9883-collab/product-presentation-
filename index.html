@@ -5,17 +5,723 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantex Academic Intelligence Platform | AI-Powered Academic Excellence Platform</title>
     <meta name="description" content="Discover Quantex Academic Intelligence Platform, the AI-powered intelligence layer for schools, colleges, and coaching centers. Elevate student performance, automate attendance, and gain complete institutional visibility.">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="style.css">
     <!-- Premium Emoji Favicon to resolve 404 console error -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Background Sparkles / Gradients & Motion Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);">Q</span>
+                <div class="logo-text">
+                    <span class="logo-main">QUANTEX</span>
+                    <span class="logo-sub">Intelligence Solutions</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#solve-by-role" class="nav-link">Solutions by Role</a>
+                <a href="#key-features" class="nav-link">AI Features</a>
+                <a href="#comparison" class="nav-link">Comparison</a>
+                <a href="#roi-calculator" class="nav-link">ROI Calculator</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <svg class="theme-icon-dark" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>
+                    <svg class="theme-icon-light" viewBox="0 0 24 24" style="display:none;"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM2 13h2v-2H2v2zm18 0h2v-2h-2v2zM11 2v2h2V2h-2zm0 18v2h2v-2h-2zM5.99 4.58L4.58 5.99l1.41 1.41 1.41-1.41-1.41-1.41zm12.02 12.02l-1.41 1.41 1.41 1.41 1.41-1.41-1.41-1.41zM5.99 19.42l1.41 1.41 1.41-1.41-1.41-1.41-1.41 1.41zm12.02-12.02l1.41-1.41-1.41-1.41-1.41 1.41 1.41 1.41z"/></svg>
+                </button>
+                <a href="#contact" class="btn btn-primary contact-btn">Request Demo</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="overview" class="hero-section">
+            <!-- Video Background Container -->
+            <div class="video-bg-container">
+                <video id="hero-bg-video" autoplay loop muted playsinline>
+                    <source src="bg_video.mp4" type="video/mp4">
+                    <!-- High-quality cinematic mountain mist loops (similar to micro1.ai) -->
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-thick-fog-covering-mountain-peaks-43288-large.mp4" type="video/mp4">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-moving-slowly-over-mountain-tops-42217-large.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <!-- Floating Video Sound Control -->
+            <button id="hero-sound-toggle" class="sound-toggle-btn" aria-label="Toggle sound">
+                <span class="sound-toggle-icon">🔇</span>
+                <span class="sound-toggle-text">Sound Off</span>
+            </button>
+        </section>
+
+        <!-- Brand Intro & AI Core (Moved from Hero Overlay to below video) -->
+        <section id="brand-intro" class="brand-intro-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-new">NEW: Quantex Academic Excellence Platform</div>
+                    <h1 class="hero-title">Where Vision Meets <span class="gradient-text">Intelligence</span></h1>
+                    <p class="hero-subtitle">
+                        An AI-Powered Academic Excellence Platform that empowers Students, Teachers, HODs, Parents, Administrators, and Institution Chairmen with unified data-driven insights.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#solve-by-role" class="btn btn-primary btn-lg">Launch Live Simulator</a>
+                        <a href="#roi-calculator" class="btn btn-outline btn-lg">Calculate Impact ROI</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">500+</span>
+                            <span class="stat-lbl">Institutions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">2.5L+</span>
+                            <span class="stat-lbl">Students Active</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">92%</span>
+                            <span class="stat-lbl">Success Rate (by 2027)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-preview">
+                    <!-- AI Interactive Motion Hub Graphic -->
+                    <div class="glass-container hero-glass-preview">
+                        <div class="preview-header">
+                            <div class="preview-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="preview-title">Quantex Academic Intelligence Platform - Unified Hub</div>
+                        </div>
+                        <div class="preview-body" style="padding: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg viewBox="0 0 400 400" class="ai-hub-svg">
+                                <defs>
+                                    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="var(--primary)" stop-opacity="0.4" />
+                                        <stop offset="100%" stop-color="var(--primary)" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <!-- Connections -->
+                                <line x1="200" y1="200" x2="200" y2="70" class="hub-line" />
+                                <line x1="200" y1="200" x2="310" y2="140" class="hub-line" />
+                                <line x1="200" y1="200" x2="280" y2="290" class="hub-line" />
+                                <line x1="200" y1="200" x2="120" y2="290" class="hub-line" />
+                                <line x1="200" y1="200" x2="90" y2="140" class="hub-line" />
+
+                                <!-- Flowing data packets -->
+                                <circle cx="200" cy="70" r="4" class="flow-dot flow-dot-1" />
+                                <circle cx="310" cy="140" r="4" class="flow-dot flow-dot-2" />
+                                <circle cx="280" cy="290" r="4" class="flow-dot flow-dot-3" />
+                                <circle cx="120" cy="290" r="4" class="flow-dot flow-dot-4" />
+                                <circle cx="90" cy="140" r="4" class="flow-dot flow-dot-5" />
+
+                                <!-- Ambient Core Glow -->
+                                <circle cx="200" cy="200" r="80" fill="url(#core-glow)" class="hub-core-glow" />
+
+                                <!-- Outer Pulsing Rings -->
+                                <circle cx="200" cy="200" r="55" class="hub-core-ring ring-1" />
+                                <circle cx="200" cy="200" r="65" class="hub-core-ring ring-2" />
+
+                                <!-- Center Core Node -->
+                                <circle cx="200" cy="200" r="45" class="hub-node hub-core" />
+                                <text x="200" y="196" text-anchor="middle" class="hub-text core-title">QUANTEX</text>
+                                <text x="200" y="210" text-anchor="middle" class="hub-text core-subtitle">AI CORE</text>
+
+                                <!-- Outer Stakeholder Nodes -->
+                                <g class="outer-node-group" data-role="student">
+                                    <circle cx="200" cy="70" r="26" class="hub-node node-student" />
+                                    <text x="200" y="76" text-anchor="middle" class="hub-icon-text">🎓</text>
+                                    <text x="200" y="112" text-anchor="middle" class="hub-label">STUDENT</text>
+                                </g>
+
+                                <g class="outer-node-group" data-role="teacher">
+                                    <circle cx="310" cy="140" r="26" class="hub-node node-teacher" />
+                                    <text x="310" y="146" text-anchor="middle" class="hub-icon-text">👩‍🏫</text>
+                                    <text x="310" y="182" text-anchor="middle" class="hub-label">TEACHER</text>
+                                </g>
+
+                                <g class="outer-node-group" data-role="hod">
+                                    <circle cx="280" cy="290" r="26" class="hub-node node-hod" />
+                                    <text x="280" y="296" text-anchor="middle" class="hub-icon-text">📊</text>
+                                    <text x="280" y="332" text-anchor="middle" class="hub-label">HOD</text>
+                                </g>
+
+                                <g class="outer-node-group" data-role="parent">
+                                    <circle cx="120" cy="290" r="26" class="hub-node node-parent" />
+                                    <text x="120" y="296" text-anchor="middle" class="hub-icon-text">👪</text>
+                                    <text x="120" y="332" text-anchor="middle" class="hub-label">PARENT</text>
+                                </g>
+
+                                <g class="outer-node-group" data-role="admin">
+                                    <circle cx="90" cy="140" r="26" class="hub-node node-admin" />
+                                    <text x="90" y="146" text-anchor="middle" class="hub-icon-text">🏫</text>
+                                    <text x="90" y="182" text-anchor="middle" class="hub-label">ADMIN</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Solver Section (Stakeholders Hub) -->
+        <section id="solve-by-role" class="solve-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Built for Everyone. <span class="gradient-text">Designed for Success.</span></h2>
+                    <p class="section-desc">Select your role to see how Quantex Academic Intelligence Platform resolves your unique challenges and presents you with the tools you need.</p>
+                </div>
+
+                <!-- Stakeholder Navigation Tabs -->
+                <div class="role-tabs">
+                    <button class="role-tab active" data-role="student">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.49 18.14A9.003 9.003 0 0012 21a9.003 9.003 0 006.51-2.86L12 15l-6.51 3.14z"/></svg>
+                        <span>Student</span>
+                    </button>
+                    <button class="role-tab" data-role="teacher">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                        <span>Teacher / Faculty</span>
+                    </button>
+                    <button class="role-tab" data-role="hod">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <span>HOD</span>
+                    </button>
+                    <button class="role-tab" data-role="parent">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Parent</span>
+                    </button>
+                    <button class="role-tab" data-role="admin">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                        <span>Administration</span>
+                    </button>
+                    <button class="role-tab" data-role="chairman">
+                        <svg class="tab-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
+                        <span>Chairman / Trust</span>
+                    </button>
+                </div>
+
+                <!-- Interactive Display Board -->
+                <div class="role-board glass-container">
+                    <div class="role-info-side">
+                        <div class="role-badge">STAKEHOLDER PROFILE</div>
+                        <h3 class="role-board-title" id="role-title">Student Dashboard</h3>
+                        <p class="role-board-intro" id="role-intro">Ensures customized, self-paced progress tracking for students with targeted revision insights to minimize exam stress.</p>
+                        
+                        <div class="challenges-block">
+                            <h4>Current Challenges Faced</h4>
+                            <ul class="challenge-list" id="role-challenges">
+                                <!-- Dynamically Injected -->
+                            </ul>
+                        </div>
+
+                        <div class="solutions-block">
+                            <h4>How Quantex Academic Intelligence Platform Solves It</h4>
+                            <ul class="solution-list" id="role-solutions">
+                                <!-- Dynamically Injected -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Dynamic Live Dashboard Simulator -->
+                    <div class="role-dashboard-side">
+                        <div class="simulator-window">
+                            <div class="simulator-header">
+                                <div class="sim-dot red"></div>
+                                <div class="sim-dot yellow"></div>
+                                <div class="sim-dot green"></div>
+                                <span class="sim-url" id="sim-url" style="flex-grow:1;">https://academic-companion.quantexsys.com/student-portal</span>
+                            </div>
+                            <div class="simulator-canvas" id="sim-canvas">
+                                <!-- Dynamic JS Injected HTML representing the actual active dashboards -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High-Fidelity UI Showcase Carousel -->
+        <section id="ui-showcase" class="showcase-section" style="padding: 80px 0; background: rgba(7, 9, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); position:relative; overflow:hidden;">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 40px;">
+                    <h2 class="section-title">High-Fidelity <span class="gradient-text">UI Showcase</span></h2>
+                    <p class="section-desc">Review the actual operational dashboards designed for each stakeholder group.</p>
+                </div>
+
+                <div class="carousel-container" style="max-width: 900px; margin: 0 auto; position: relative;">
+                    <!-- Main Browser Viewport (Light Theme Chrome) -->
+                    <div class="carousel-viewport" style="position: relative; aspect-ratio: 16/9; background: #FFFFFF; border: 1px solid rgba(15, 23, 42, 0.15); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);">
+                        <!-- Browser Header -->
+                        <div style="background: #F1F5F9; border-bottom: 1px solid rgba(15, 23, 42, 0.08); padding: 8px 16px; display: flex; align-items: center; gap: 8px;">
+                            <div style="display: flex; gap: 6px;">
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; display: block;"></span>
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; display: block;"></span>
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; display: block;"></span>
+                            </div>
+                            <div style="flex-grow: 1; margin: 0 16px; background: #FFFFFF; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 4px; padding: 2px 10px; font-size: 10px; color: rgba(15, 23, 42, 0.5); font-family: monospace; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" id="showcase-browser-url">
+                                https://quantexsys.com/academic-companion/student-dashboard
+                            </div>
+                        </div>
+
+                        <!-- Track -->
+                        <div class="carousel-track" id="carousel-track" style="display: flex; width: 700%; height: calc(100% - 31px); transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                            <!-- Slides -->
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="student_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Student Dashboard"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="teacher_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Teacher Dashboard"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="hod_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="HOD Dashboard"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="parent_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Parent Dashboard"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="admin_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Admin Dashboard"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="frs_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="FRS Biometrics"></div>
+                            <div class="carousel-slide" style="width: 14.285%; height: 100%;"><img src="chairman_dashboard.jpg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Chairman Dashboard"></div>
+                        </div>
+ 
+                        <!-- Navigation Controls inside image frame -->
+                        <button class="carousel-control-btn prev" id="carousel-prev" style="position: absolute; left: 16px; top: 55%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(15, 23, 42, 0.1); color: #0f172a; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; transition: all 0.3s; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">←</button>
+                        <button class="carousel-control-btn next" id="carousel-next" style="position: absolute; right: 16px; top: 55%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(15, 23, 42, 0.1); color: #0f172a; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; transition: all 0.3s; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">→</button>
+                    </div>
+ 
+                    <!-- Clean Centered Caption details BELOW the browser frame -->
+                    <div class="showcase-caption-container" style="margin-top: 24px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <span id="showcase-badge" style="display: inline-block; padding: 4px 12px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: 20px; font-size: 10px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; font-family: var(--font-heading);">STUDENT PORTAL</span>
+                        <h4 id="showcase-title" style="font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 6px; font-family: var(--font-heading);">Student AI Companion</h4>
+                        <p id="showcase-desc-text" style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0 0 16px 0;">Displays customized NEET/JEE mock analytics, percentile progression curves, and AI-mapped conceptual topic gaps.</p>
+                        
+                        <!-- indicators -->
+                        <div class="carousel-nav" style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                            <button class="carousel-indicator active" data-slide="0" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">Student</button>
+                            <button class="carousel-indicator" data-slide="1" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">Teacher</button>
+                            <button class="carousel-indicator" data-slide="2" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">HOD</button>
+                            <button class="carousel-indicator" data-slide="3" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">Parent</button>
+                            <button class="carousel-indicator" data-slide="4" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">Admin</button>
+                            <button class="carousel-indicator" data-slide="5" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">FRS Biometrics</button>
+                            <button class="carousel-indicator" data-slide="6" style="padding: 6px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); cursor: pointer; transition: all 0.3s; font-family: var(--font-heading);">Chairman</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Working Prototype Logins Section -->
+        <section id="prototype-logins" class="prototype-section" style="padding: 80px 0; background: rgba(7, 9, 14, 0.3); border-bottom: 1px solid var(--border-color); position:relative;">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 45px;">
+                    <h2 class="section-title">Live Prototype <span class="gradient-text">Logins</span></h2>
+                    <p class="section-desc">Test our fully functional product prototypes. Copy the credentials below and click the launch button to view the active platform features.</p>
+                </div>
+
+                <div class="prototype-grid">
+                    <!-- Student Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--primary); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">🎓</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Student Portal</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Explore custom mock exam results, learning analytics, and topic-wise gap sheets.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-student-user">sasi.student@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.student@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: var(--primary); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-student-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: var(--primary); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.student@neet.com', '12345678', 'student')" class="btn btn-primary" style="padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; border: none; cursor: pointer; color: #fff;">Launch Student Portal ↗</button>
+                    </div>
+
+                    <!-- Teacher Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--accent); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">👩‍🏫</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Faculty Console</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Review class attendance, assign homework sheets, and release test results.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-teacher-user">sasi.teacher@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.teacher@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); color: var(--accent); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-teacher-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); color: var(--accent); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.teacher@neet.com', '12345678', 'college')" class="btn btn-primary" style="background: var(--accent); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(249, 115, 22, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Faculty Console ↗</button>
+                    </div>
+
+                    <!-- Parent Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--purple); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">👪</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Parent Portal</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Monitor child performance grades, live biometric school logs, and remarks.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-parent-user">sasi.student@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.student@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); color: var(--purple); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-parent-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); color: var(--purple); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.student@neet.com', '12345678', 'parent')" class="btn btn-primary" style="background: var(--purple); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(168, 85, 247, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Parent Feed ↗</button>
+                    </div>
+
+                    <!-- Admin Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--emerald); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">🏫</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Admin Operations</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Oversee ticket pipelines, enrollment progression metrics, and global controls.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-admin-user">sasiadmin@test.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasiadmin@test.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--emerald); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-admin-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--emerald); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasiadmin@test.com', '12345678', 'college')" class="btn btn-primary" style="background: var(--emerald); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Operations Hub ↗</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Key Features Section -->
+        <section id="key-features" class="features-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Engineered with <span class="gradient-text">Advanced Intelligence</span></h2>
+                    <p class="section-desc">Quantex Academic Intelligence Platform provides deep analytics that transform typical raw performance numbers into actionable academic operations.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper purple">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <circle cx="30" cy="30" r="22" fill="none" stroke="var(--purple)" stroke-opacity="0.1" stroke-width="2"/>
+                                <circle cx="30" cy="30" r="14" fill="none" stroke="var(--purple)" stroke-opacity="0.2" stroke-width="1.5"/>
+                                <line x1="30" y1="4" x2="30" y2="56" stroke="var(--purple)" stroke-opacity="0.15" stroke-width="1"/>
+                                <line x1="4" y1="30" x2="56" y2="30" stroke="var(--purple)" stroke-opacity="0.15" stroke-width="1"/>
+                                <circle cx="40" cy="20" r="6" fill="var(--purple-glow)" stroke="var(--purple)" stroke-width="2"/>
+                                <circle cx="40" cy="20" r="10" fill="none" stroke="var(--purple)" stroke-width="1" stroke-opacity="0.5" class="svg-pulse-ring"/>
+                                <circle cx="20" cy="38" r="4" fill="var(--purple)" />
+                            </svg>
+                        </div>
+                        <h3>AI Weak Topic Detection</h3>
+                        <p>Our algorithms track mock tests and quizzes to isolate which concepts require focus, reducing student revision panic.</p>
+                    </div>
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper orange">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <path d="M 12 18 L 12 12 L 18 12" fill="none" stroke="var(--accent)" stroke-width="2" />
+                                <path d="M 42 12 L 48 12 L 48 18" fill="none" stroke="var(--accent)" stroke-width="2" />
+                                <path d="M 48 42 L 48 48 L 42 48" fill="none" stroke="var(--accent)" stroke-width="2" />
+                                <path d="M 18 48 L 12 48 L 12 42" fill="none" stroke="var(--accent)" stroke-width="2" />
+                                <circle cx="30" cy="24" r="9" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-opacity="0.3"/>
+                                <path d="M 18 42 C 18 32, 42 32, 42 42" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-opacity="0.3"/>
+                                <line x1="10" y1="28" x2="50" y2="28" stroke="var(--accent)" stroke-width="2" class="svg-laser-line" />
+                            </svg>
+                        </div>
+                        <h3>Face Recognition Attendance</h3>
+                        <p>A star feature for teachers. Mark classroom and hostel attendance instantly with high accuracy, saving hours of manual logging.</p>
+                    </div>
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper blue">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <rect x="12" y="16" width="30" height="34" rx="4" fill="none" stroke="var(--blue)" stroke-width="2" />
+                                <rect x="20" y="10" width="30" height="34" rx="4" fill="var(--bg-dark)" stroke="var(--blue)" stroke-width="2" class="svg-doc-card" />
+                                <line x1="26" y1="18" x2="36" y2="18" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" />
+                                <line x1="26" y1="26" x2="44" y2="26" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" />
+                                <circle cx="38" cy="36" r="5" fill="var(--emerald)" />
+                                <path d="M 36 36 L 37.5 37.5 L 40 34.5" fill="none" stroke="#fff" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Personalized Practice Sheets</h3>
+                        <p>Automatically triggers customized diagnostic sets mapped specifically to individual students' conceptual flaws.</p>
+                    </div>
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper emerald">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <line x1="10" y1="48" x2="50" y2="48" stroke="var(--emerald)" stroke-opacity="0.3" stroke-width="2"/>
+                                <line x1="12" y1="10" x2="12" y2="50" stroke="var(--emerald)" stroke-opacity="0.3" stroke-width="2"/>
+                                <rect x="18" y="32" width="6" height="16" fill="var(--emerald-glow)" stroke="var(--emerald)" stroke-width="1.5" rx="1"/>
+                                <rect x="28" y="24" width="6" height="24" fill="var(--emerald-glow)" stroke="var(--emerald)" stroke-width="1.5" rx="1"/>
+                                <rect x="38" y="14" width="6" height="34" fill="var(--emerald-glow)" stroke="var(--emerald)" stroke-width="1.5" rx="1"/>
+                                <path d="M 12 40 L 21 34 L 31 22 L 41 12" fill="none" stroke="var(--emerald)" stroke-width="2.5" stroke-linecap="round" />
+                                <circle cx="41" cy="12" r="3" fill="var(--emerald)" />
+                            </svg>
+                        </div>
+                        <h3>Institutional Benchmarking</h3>
+                        <p>Allows HODs and Principals to view multi-section performance distributions, tracking student outcomes in real time.</p>
+                    </div>
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper yellow">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <rect x="8" y="24" width="12" height="12" rx="3" fill="none" stroke="var(--yellow)" stroke-width="2"/>
+                                <circle cx="30" cy="30" r="6" fill="none" stroke="var(--yellow)" stroke-width="2"/>
+                                <rect x="42" y="14" width="12" height="12" rx="3" fill="none" stroke="var(--emerald)" stroke-width="2"/>
+                                <rect x="42" y="34" width="12" height="12" rx="3" fill="none" stroke="var(--red)" stroke-width="2"/>
+                                <path d="M 20 30 L 24 30" stroke="var(--yellow)" stroke-width="1.5" />
+                                <path d="M 36 30 L 42 20" stroke="var(--yellow)" stroke-width="1.5" />
+                                <path d="M 36 30 L 42 40" stroke="var(--yellow)" stroke-width="1.5" />
+                                <circle cx="20" cy="30" r="2" fill="var(--yellow)" />
+                            </svg>
+                        </div>
+                        <h3>Smart Complaint Pipeline</h3>
+                        <p>Students and parents log facility or academic complaints, which are automatically prioritized and tracked till resolution.</p>
+                    </div>
+                    <div class="feature-card glass-container">
+                        <div class="feature-icon-wrapper red">
+                            <svg class="feature-icon-illustration" viewBox="0 0 60 60">
+                                <rect x="18" y="8" width="24" height="44" rx="6" fill="none" stroke="var(--red)" stroke-width="2"/>
+                                <line x1="26" y1="12" x2="34" y2="12" stroke="var(--red)" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+                                <rect x="22" y="18" width="16" height="8" rx="2" fill="var(--red-glow)" stroke="var(--red)" stroke-width="1"/>
+                                <rect x="22" y="29" width="16" height="8" rx="2" fill="var(--red-glow)" stroke="var(--red)" stroke-width="1"/>
+                                <line x1="25" y1="22" x2="31" y2="22" stroke="var(--red)" stroke-width="1.5" />
+                                <line x1="25" y1="33" x2="31" y2="33" stroke="var(--red)" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <h3>Real-time Parent Feeds</h3>
+                        <p>Closes the communication gap with instant notifications regarding exam marks, remarks, and daily campus activity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional vs Academic Companion Comparison Matrix -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">The Paradigm Shift in <span class="gradient-text">Academic Success</span></h2>
+                    <p class="section-desc">See how Quantex Academic Intelligence Platform stacks up against traditional institutional methods.</p>
+                </div>
+
+                <div class="comparison-table-wrapper glass-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature Dimension</th>
+                                <th>Traditional Approach</th>
+                                <th class="active-col">Quantex Academic Intelligence Platform</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Performance Tracking</strong></td>
+                                <td>Manual entries, disjointed spreadsheets, static reports.</td>
+                                <td class="active-col">AI-powered tracking, weak topic identification, real-time feedback.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Student Attendance</strong></td>
+                                <td>Paper registers, takes 5-10 mins per lecture. Buddy punching possible.</td>
+                                <td class="active-col">AI Face Recognition. Takes seconds, 100% secure & automatic.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Revision and Exams</strong></td>
+                                <td>Generic study plans, same practice materials for everyone.</td>
+                                <td class="active-col">Adaptive mock test generators and personalized question banks.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Parent Alignment</strong></td>
+                                <td>Isolated parent-teacher meetings, delayed updates on grades.</td>
+                                <td class="active-col">Dedicated Parent Dashboard with real-time progress feeds and alerts.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Grievance Resolution</strong></td>
+                                <td>Written complaints often ignored, untracked progress.</td>
+                                <td class="active-col">Automated ticket sorting, escalation matrices, tracking.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Management Insights</strong></td>
+                                <td>Decisions based on assumptions, post-mortem results evaluation.</td>
+                                <td class="active-col">Predictive rank indicators, inter-section analysis, faculty scoring.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic ROI Calculator -->
+        <section id="roi-calculator" class="roi-section">
+            <div class="container">
+                <div class="roi-grid">
+                    <div class="roi-inputs-side">
+                        <h2 class="section-title">Calculate Your Institution's <span class="gradient-text">Quantex Impact</span></h2>
+                        <p class="section-desc">See the quantitative hours saved, administrative relief, and performance gains with the implementation of Academic Companion.</p>
+                        
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="range-students">Number of Enrolled Students: <span id="val-students" class="val-display">1200</span></label>
+                                <input type="range" id="range-students" min="100" max="10000" step="50" value="1200">
+                            </div>
+                            <div class="input-group">
+                                <label for="range-teachers">Number of Faculty Members: <span id="val-teachers" class="val-display">60</span></label>
+                                <input type="range" id="range-teachers" min="10" max="500" step="5" value="60">
+                            </div>
+                            <div class="input-group">
+                                <label for="range-tests">Mock Tests Conducted / Month: <span id="val-tests" class="val-display">8</span></label>
+                                <input type="range" id="range-tests" min="1" max="30" step="1" value="8">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="roi-results-side">
+                        <div class="glass-container roi-result-card">
+                            <h3>Quantex Projection Summary</h3>
+                            <div class="roi-metrics-grid">
+                                <div class="roi-metric">
+                                    <div class="roi-val" id="res-hours-saved">480 hrs</div>
+                                    <div class="roi-lbl">Faculty Admin Time Saved / Month</div>
+                                </div>
+                                <div class="roi-metric">
+                                    <div class="roi-val" id="res-efficiency">70%</div>
+                                    <div class="roi-lbl">Reduction in Manual Analysis</div>
+                                </div>
+                                <div class="roi-metric">
+                                    <div class="roi-val" id="res-performance">+30%</div>
+                                    <div class="roi-lbl">Faster Performance Growth</div>
+                                </div>
+                                <div class="roi-metric">
+                                    <div class="roi-val" id="res-mock-speed">Instant</div>
+                                    <div class="roi-lbl">Test Grading & AI Insights Delivery</div>
+                                </div>
+                            </div>
+                            <div class="roi-disclaimer">
+                                *Projections based on historical success indicators from Quantex AI Adoption models.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Ready to Elevate Your Institution?</h2>
+                        <p>Join hundreds of schools and colleges who have digitized their academic lifecycle, bolstered outcomes, and restored parent confidence.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <div>
+                                    <h4>Have questions or need a custom proposal?</h4>
+                                    <a href="mailto:pavankumarpothula9@gmail.com">pavankumarpothula9@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🚀</span>
+                                <div>
+                                    <h4>Presented by</h4>
+                                    <p>Pavanswetha (Lead Developer & Product Designer)</p>
+                                    <p>QUANTEX INTELLIGENCE SOLUTIONS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-side">
+                        <form class="glass-container contact-form" id="demo-form">
+                            <h3>Book a Personal Demo</h3>
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" placeholder="e.g. Dr. Ramesh Kumar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" placeholder="e.g. principal@college.edu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number</label>
+                                <input type="tel" id="form-phone" placeholder="e.g. +91 9059530595" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-role">Your Role</label>
+                                <select id="form-role">
+                                    <option value="chairman">Chairman / Board Member</option>
+                                    <option value="principal">Principal / Director</option>
+                                    <option value="hod">HOD</option>
+                                    <option value="faculty">Faculty Member</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Institution Name & Requirements</label>
+                                <textarea id="form-message" rows="3" placeholder="Tell us about your institution size..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Schedule Demo Session</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Quantex Intelligence Solutions. All rights reserved.</p>
+            <p>Designed and Built by the Quantex Dev Team.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Demo Form -->
+    <div id="toast" class="toast">Demo requested successfully! We will contact you soon.</div>
+
+    <!-- Auto Login Handler -->
+    <script>
+        function launchPortal(url, email, password, role) {
+            // Fallback: Copy password to clipboard automatically
+            navigator.clipboard.writeText(password).then(() => {
+                console.log("Password copied to clipboard.");
+            }).catch((err) => {
+                console.warn("Could not copy password: ", err);
+            });
+            
+            // Build URL with multiple formats to ensure compatibility with different router setups
+            const separator = url.includes('?') ? '&' : '?';
+            let launchUrl = `${url}${separator}autologin=true&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&username=${encodeURIComponent(email)}&pass=${encodeURIComponent(password)}`;
+            if (role) {
+                launchUrl += `&role=${encodeURIComponent(role)}`;
+            }
+            
+            window.open(launchUrl, '_blank');
+        }
+    </script>
+
+    <!-- Script Resource -->
+    <script src="app.js"></script>
 </body>
 </html>
