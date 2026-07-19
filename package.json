@@ -2,7 +2,7 @@
   "name": "product-presentation",
   "version": "1.0.0",
   "description": "Quantex Intelligence Solutions Presentation Website",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "build": "echo 'Building static site...'"
   },
