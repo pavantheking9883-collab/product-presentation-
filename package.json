@@ -1,0 +1,10 @@
+{
+  "name": "product-presentation",
+  "version": "1.0.0",
+  "description": "Quantex Intelligence Solutions Presentation Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Building static site...'"
+  },
+  "dependencies": {}
+}
