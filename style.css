@@ -2348,6 +2348,18 @@ body.light-theme .prototype-card:hover {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
+    .role-board {
+        padding: 24px 16px !important;
+    }
+    .brand-intro-section {
+        padding: 60px 0 !important;
+    }
+    .showcase-section {
+        padding: 60px 0 !important;
+    }
+    .prototype-section {
+        padding: 60px 0 !important;
+    }
 }
 
 
