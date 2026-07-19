@@ -1,7 +1,7 @@
 // Stakeholders Data (Challenges, Solutions, and Custom Configurations)
 const stakeholderData = {
     student: {
-        title: "Student Academic Companion",
+        title: "Quantex Student Companion",
         url: "https://academic-companion.quantexsys.com/student-dashboard",
         intro: "Acts as a personal academic guide for every student, pinpointing exact learning gaps, managing assignments, and relieving competitive exam stress.",
         challenges: [
@@ -130,6 +130,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Header Scroll Handling (Transparent at top, Blur/solid background on scroll)
+    const header = document.querySelector(".header");
+    if (header) {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Run once initially in case page starts scrolled
+    }
+
+    // Hero Background Video Sound Control
+    const bgVideo = document.getElementById("hero-bg-video");
+    const soundToggle = document.getElementById("hero-sound-toggle");
+    
+    if (bgVideo && soundToggle) {
+        soundToggle.addEventListener("click", () => {
+            const isMuted = bgVideo.muted;
+            bgVideo.muted = !isMuted;
+            
+            // Update button text and icon
+            const icon = soundToggle.querySelector(".sound-toggle-icon");
+            const text = soundToggle.querySelector(".sound-toggle-text");
+            
+            if (bgVideo.muted) {
+                if (icon) icon.innerText = "🔇";
+                if (text) text.innerText = "Sound Off";
+            } else {
+                if (icon) icon.innerText = "🔊";
+                if (text) text.innerText = "Sound On";
+            }
+        });
+    }
+
     // Theme Toggle (Light / Dark Mode)
     const themeToggle = document.getElementById("theme-toggle");
     const darkIcon = document.querySelector(".theme-icon-dark");
@@ -241,17 +278,96 @@ document.addEventListener("DOMContentLoaded", () => {
         updateROI();
     }
 
-    // Demo Form Submission
+    // Demo Form Submission (Background Email/Notification Submission)
     const demoForm = document.getElementById("demo-form");
     if (demoForm) {
-        demoForm.addEventListener("submit", (e) => {
+        demoForm.addEventListener("submit", async (e) => {
             e.preventDefault();
+            
+            const name = document.getElementById("form-name").value;
+            const email = document.getElementById("form-email").value;
+            const phone = document.getElementById("form-phone").value;
+            const role = document.getElementById("form-role").value;
+            const message = document.getElementById("form-message").value;
+            
             const toast = document.getElementById("toast");
+            toast.innerText = "Submitting your request...";
+            toast.style.background = "var(--primary)";
             toast.classList.add("show");
+            
+            // Credentials
+            const web3FormsAccessKey = "6659c8c0-10b0-4d2d-80ad-e69f5a958d69"; 
+            const tgBotToken = "8739804225:AAE23UaWdWtl7CL1dbTCFn-jHRBVk-ZMcAo";
+            const tgUserId = "5816427459";
+            
+            // Format the Telegram notification message
+            const tgMessage = `🚨 <b>New Demo Requested!</b> 🚨\n\n` +
+                              `👤 <b>Name:</b> ${name}\n` +
+                              `📧 <b>Email:</b> ${email}\n` +
+                              `💼 <b>Role:</b> ${role}\n` +
+                              `🏫 <b>Institution Details:</b> ${message}\n\n` +
+                              `📞 <b>Call them now:</b> <a href="tel:${phone}">${phone}</a>`;
+            
+            // Send Telegram message in background
+            const tgUrl = `https://api.telegram.org/bot${tgBotToken}/sendMessage`;
+            fetch(tgUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: tgUserId,
+                    text: tgMessage,
+                    parse_mode: "HTML"
+                })
+            }).then(() => {
+                console.log("Telegram notification sent successfully.");
+            }).catch(err => {
+                console.warn("Telegram notification failed: ", err);
+            });
+            
+            // Send Email notification in background
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        access_key: web3FormsAccessKey,
+                        subject: `New Demo Call Request from ${name}`,
+                        from_name: "Quantex Landing Page",
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        role: role,
+                        message: `Someone with details below wants a demo call:\n\n` +
+                                 `Name: ${name}\n` +
+                                 `Email: ${email}\n` +
+                                 `Role: ${role}\n` +
+                                 `Institution/Message: ${message}\n\n` +
+                                 `CALL THEM NOW at: ${phone}`
+                    })
+                });
+                
+                const result = await response.json();
+                if (response.status === 200) {
+                    toast.innerText = "Demo requested successfully! We will contact you soon.";
+                    toast.style.background = "var(--emerald)";
+                } else {
+                    toast.innerText = "Submission error: " + (result.message || "Please try again.");
+                    toast.style.background = "var(--red)";
+                }
+            } catch (err) {
+                console.error("Form submission failed: ", err);
+                toast.innerText = "Network error. Please check your connection.";
+                toast.style.background = "var(--red)";
+            }
             
             setTimeout(() => {
                 toast.classList.remove("show");
-            }, 3000);
+            }, 4000);
             
             demoForm.reset();
         });

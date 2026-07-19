@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Companion | AI-Powered Academic Excellence Platform by Quantex</title>
-    <meta name="description" content="Discover Academic Companion, the AI-powered intelligence layer for schools, colleges, and coaching centers. Elevate student performance, automate attendance, and gain complete institutional visibility.">
+    <title>Quantex Academic Intelligence Platform | AI-Powered Academic Excellence Platform</title>
+    <meta name="description" content="Discover Quantex Academic Intelligence Platform, the AI-powered intelligence layer for schools, colleges, and coaching centers. Elevate student performance, automate attendance, and gain complete institutional visibility.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +21,14 @@
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
     <div class="bg-glow bg-glow-3"></div>
-
     <!-- Navigation Header -->
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-icon">Q</span>
+                <span class="logo-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);">Q</span>
                 <div class="logo-text">
                     <span class="logo-main">QUANTEX</span>
-                    <span class="logo-sub">Intelligence Systems</span>
+                    <span class="logo-sub">Intelligence Solutions</span>
                 </div>
             </a>
             <nav class="nav">
@@ -55,9 +54,29 @@
     <main>
         <!-- Hero Section -->
         <section id="overview" class="hero-section">
+            <!-- Video Background Container -->
+            <div class="video-bg-container">
+                <video id="hero-bg-video" autoplay loop muted playsinline>
+                    <source src="bg_video.mp4" type="video/mp4">
+                    <!-- High-quality cinematic mountain mist loops (similar to micro1.ai) -->
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-thick-fog-covering-mountain-peaks-43288-large.mp4" type="video/mp4">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-moving-slowly-over-mountain-tops-42217-large.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <!-- Floating Video Sound Control -->
+            <button id="hero-sound-toggle" class="sound-toggle-btn" aria-label="Toggle sound">
+                <span class="sound-toggle-icon">🔇</span>
+                <span class="sound-toggle-text">Sound Off</span>
+            </button>
+        </section>
+
+        <!-- Brand Intro & AI Core (Moved from Hero Overlay to below video) -->
+        <section id="brand-intro" class="brand-intro-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge-new">NEW: Academic Companion 2.0</div>
+                    <div class="badge-new">NEW: Quantex Academic Excellence Platform</div>
                     <h1 class="hero-title">Where Vision Meets <span class="gradient-text">Intelligence</span></h1>
                     <p class="hero-subtitle">
                         An AI-Powered Academic Excellence Platform that empowers Students, Teachers, HODs, Parents, Administrators, and Institution Chairmen with unified data-driven insights.
@@ -88,7 +107,7 @@
                             <div class="preview-dots">
                                 <span></span><span></span><span></span>
                             </div>
-                            <div class="preview-title">Academic Companion - Unified Intelligence Hub</div>
+                            <div class="preview-title">Quantex Academic Intelligence Platform - Unified Hub</div>
                         </div>
                         <div class="preview-body" style="padding: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg viewBox="0 0 400 400" class="ai-hub-svg">
@@ -158,17 +177,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
-
-
 
         <!-- Dynamic Solver Section (Stakeholders Hub) -->
         <section id="solve-by-role" class="solve-section">
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Built for Everyone. <span class="gradient-text">Designed for Success.</span></h2>
-                    <p class="section-desc">Select your role to see how Academic Companion resolves your unique challenges and presents you with the tools you need.</p>
+                    <p class="section-desc">Select your role to see how Quantex Academic Intelligence Platform resolves your unique challenges and presents you with the tools you need.</p>
                 </div>
 
                 <!-- Stakeholder Navigation Tabs -->
@@ -214,7 +230,7 @@
                         </div>
 
                         <div class="solutions-block">
-                            <h4>How Academic Companion Solves It</h4>
+                            <h4>How Quantex Academic Intelligence Platform Solves It</h4>
                             <ul class="solution-list" id="role-solutions">
                                 <!-- Dynamically Injected -->
                             </ul>
@@ -300,12 +316,108 @@
             </div>
         </section>
 
+        <!-- Live Working Prototype Logins Section -->
+        <section id="prototype-logins" class="prototype-section" style="padding: 80px 0; background: rgba(7, 9, 14, 0.3); border-bottom: 1px solid var(--border-color); position:relative;">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 45px;">
+                    <h2 class="section-title">Live Prototype <span class="gradient-text">Logins</span></h2>
+                    <p class="section-desc">Test our fully functional product prototypes. Copy the credentials below and click the launch button to view the active platform features.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="prototype-grid">
+                    <!-- Student Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--primary); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">🎓</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Student Portal</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Explore custom mock exam results, learning analytics, and topic-wise gap sheets.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-student-user">sasi.student@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.student@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: var(--primary); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-student-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: var(--primary); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.student@neet.com', '12345678', 'student')" class="btn btn-primary" style="padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; border: none; cursor: pointer; color: #fff;">Launch Student Portal ↗</button>
+                    </div>
+
+                    <!-- Teacher Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--accent); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">👩‍🏫</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Faculty Console</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Review class attendance, assign homework sheets, and release test results.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-teacher-user">sasi.teacher@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.teacher@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); color: var(--accent); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-teacher-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); color: var(--accent); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.teacher@neet.com', '12345678', 'college')" class="btn btn-primary" style="background: var(--accent); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(249, 115, 22, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Faculty Console ↗</button>
+                    </div>
+
+                    <!-- Parent Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--purple); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">👪</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Parent Portal</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Monitor child performance grades, live biometric school logs, and remarks.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-parent-user">sasi.student@neet.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasi.student@neet.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); color: var(--purple); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-parent-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); color: var(--purple); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasi.student@neet.com', '12345678', 'parent')" class="btn btn-primary" style="background: var(--purple); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(168, 85, 247, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Parent Feed ↗</button>
+                    </div>
+
+                    <!-- Admin Card -->
+                    <div class="glass-container prototype-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border-top: 3px solid var(--emerald); min-height: 310px;">
+                        <div>
+                            <span style="font-size: 24px; margin-bottom: 12px; display: block;">🏫</span>
+                            <h3 style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Admin Operations</h3>
+                            <p style="font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">Oversee ticket pipelines, enrollment progression metrics, and global controls.</p>
+                            
+                            <div class="cred-box" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 10px; border-radius: 8px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Email: <strong style="color: var(--text-main);" id="copy-admin-user">sasiadmin@test.com</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('sasiadmin@test.com'); alert('Email copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--emerald); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                                    <span style="color: var(--text-muted); font-weight: 500;">Password: <strong style="color: var(--text-main);" id="copy-admin-pass">12345678</strong></span>
+                                    <button onclick="navigator.clipboard.writeText('12345678'); alert('Password copied!');" class="sim-btn-small" style="font-size: 9px; padding: 2px 6px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--emerald); cursor: pointer; border-radius: 4px;">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="launchPortal('https://sasi-companion-quantex.vercel.app/login', 'sasiadmin@test.com', '12345678', 'college')" class="btn btn-primary" style="background: var(--emerald); border: none; padding: 10px 15px; font-size: 11.5px; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.4); width: 100%; cursor: pointer; color: #fff;">Launch Operations Hub ↗</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Core Key Features Section -->
         <section id="key-features" class="features-section">
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Engineered with <span class="gradient-text">Advanced Intelligence</span></h2>
-                    <p class="section-desc">Academic Companion provides deep analytics that transform typical raw performance numbers into actionable academic operations.</p>
+                    <p class="section-desc">Quantex Academic Intelligence Platform provides deep analytics that transform typical raw performance numbers into actionable academic operations.</p>
                 </div>
 
                 <div class="features-grid">
@@ -407,7 +519,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">The Paradigm Shift in <span class="gradient-text">Academic Success</span></h2>
-                    <p class="section-desc">See how Academic Companion stacks up against traditional institutional methods.</p>
+                    <p class="section-desc">See how Quantex Academic Intelligence Platform stacks up against traditional institutional methods.</p>
                 </div>
 
                 <div class="comparison-table-wrapper glass-container">
@@ -416,7 +528,7 @@
                             <tr>
                                 <th>Feature Dimension</th>
                                 <th>Traditional Approach</th>
-                                <th class="active-col">Academic Companion Solution</th>
+                                <th class="active-col">Quantex Academic Intelligence Platform</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -531,7 +643,7 @@
                                 <div>
                                     <h4>Presented by</h4>
                                     <p>Pavanswetha (Lead Developer & Product Designer)</p>
-                                    <p>QUANTEX INTELLIGENCE SYSTEMS</p>
+                                    <p>QUANTEX INTELLIGENCE SOLUTIONS</p>
                                 </div>
                             </div>
                         </div>
@@ -547,6 +659,10 @@
                             <div class="form-group">
                                 <label for="form-email">Email Address</label>
                                 <input type="email" id="form-email" placeholder="e.g. principal@college.edu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number</label>
+                                <input type="tel" id="form-phone" placeholder="e.g. +91 9059530595" required>
                             </div>
                             <div class="form-group">
                                 <label for="form-role">Your Role</label>
@@ -573,13 +689,34 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Quantex Intelligence Systems. All rights reserved.</p>
-            <p>Designed and Built by the QUANTEX Dev Team.</p>
+            <p>&copy; 2026 Quantex Intelligence Solutions. All rights reserved.</p>
+            <p>Designed and Built by the Quantex Dev Team.</p>
         </div>
     </footer>
 
     <!-- Toast Notification for Demo Form -->
     <div id="toast" class="toast">Demo requested successfully! We will contact you soon.</div>
+
+    <!-- Auto Login Handler -->
+    <script>
+        function launchPortal(url, email, password, role) {
+            // Fallback: Copy password to clipboard automatically
+            navigator.clipboard.writeText(password).then(() => {
+                console.log("Password copied to clipboard.");
+            }).catch((err) => {
+                console.warn("Could not copy password: ", err);
+            });
+            
+            // Build URL with multiple formats to ensure compatibility with different router setups
+            const separator = url.includes('?') ? '&' : '?';
+            let launchUrl = `${url}${separator}autologin=true&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&username=${encodeURIComponent(email)}&pass=${encodeURIComponent(password)}`;
+            if (role) {
+                launchUrl += `&role=${encodeURIComponent(role)}`;
+            }
+            
+            window.open(launchUrl, '_blank');
+        }
+    </script>
 
     <!-- Script Resource -->
     <script src="app.js"></script>

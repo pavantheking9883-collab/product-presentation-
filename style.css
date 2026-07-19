@@ -125,7 +125,15 @@ body.light-theme .neet-opt-card {
 }
 
 body.light-theme .header {
-    background: rgba(241, 245, 249, 0.75);
+    background: transparent !important;
+    border-bottom: 1px solid transparent !important;
+    box-shadow: none !important;
+}
+
+body.light-theme .header.scrolled {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
 }
 
 body.light-theme .footer {
@@ -292,12 +300,19 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(7, 9, 14, 0.7);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    padding: 22px 0;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(7, 9, 14, 0.75);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--border-color);
-    padding: 16px 0;
-    transition: var(--transition-smooth);
+    padding: 14px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .header-container {
@@ -355,15 +370,41 @@ h1, h2, h3, h4 {
 }
 
 .nav-link {
-    color: var(--text-muted);
+    color: var(--text-main);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 14.5px;
+    font-weight: 600;
     transition: var(--transition-smooth);
 }
 
 .nav-link:hover {
-    color: var(--text-main);
+    color: var(--primary);
+    opacity: 0.95;
+}
+
+/* Request Demo Pop Style */
+.contact-btn {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 15px -3px rgba(99, 102, 241, 0.4) !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(99, 102, 241, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+.contact-btn:hover {
+    background: var(--primary-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px -5px rgba(99, 102, 241, 0.6) !important;
+}
+body.light-theme .contact-btn {
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.3) !important;
+}
+body.light-theme .contact-btn:hover {
+    background: #1E293B !important;
+    box-shadow: 0 8px 25px -5px rgba(15, 23, 42, 0.5) !important;
 }
 
 .theme-btn {
@@ -416,8 +457,100 @@ body.light-theme .theme-btn:hover {
 
 /* Hero Section */
 .hero-section {
-    padding: 160px 0 100px 0;
+    height: 100vh;
+    width: 100%;
     position: relative;
+    overflow: hidden;
+}
+
+/* Brand Intro Section (moved below video fold) */
+.brand-intro-section {
+    padding: 100px 0;
+    background: var(--bg-dark);
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+body.light-theme .brand-intro-section {
+    background: #FFFFFF;
+}
+
+/* Video Background styles */
+.video-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.video-bg-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(7, 9, 14, 0.85) 0%, rgba(7, 9, 14, 0.5) 50%, rgba(7, 9, 14, 0.9) 100%);
+    z-index: -1;
+}
+
+/* Light Theme Video Overlay adjustment */
+body.light-theme .video-overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+/* Sound Toggle button */
+.sound-toggle-btn {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10;
+    background: rgba(7, 9, 14, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    padding: 10px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    transition: var(--transition-smooth);
+}
+
+.sound-toggle-btn:hover {
+    background: rgba(7, 9, 14, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.sound-toggle-btn:active {
+    transform: translateY(0);
+}
+
+body.light-theme .sound-toggle-btn {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(15, 23, 42, 0.2) !important;
+    color: #0F172A !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light-theme .sound-toggle-btn:hover {
+    background: #FFFFFF !important;
+    border-color: rgba(15, 23, 42, 0.35) !important;
 }
 
 .hero-container {
@@ -2048,6 +2181,149 @@ body.light-theme .carousel-indicator.active {
     background: var(--primary) !important;
     border-color: var(--primary) !important;
     color: #FFFFFF !important;
+}
+
+/* =============================================================
+   PRODUCT PRESENTATION SLIDE DECK STYLES
+   ============================================================= */
+.presentation-section {
+    background: rgba(7, 9, 14, 0.15);
+}
+
+body.light-theme .presentation-section {
+    background: rgba(241, 245, 249, 0.45);
+}
+
+.slide-nav-link {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+}
+
+.slide-nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+body.light-theme .slide-nav-link:hover {
+    background: rgba(15, 23, 42, 0.04);
+}
+
+.slide-nav-link.active {
+    background: rgba(99, 102, 241, 0.08);
+    color: var(--primary);
+    font-weight: 700;
+    border-left: 3px solid var(--primary);
+}
+
+body.light-theme .slide-nav-link.active {
+    background: rgba(99, 102, 241, 0.06);
+    color: var(--primary-hover);
+}
+
+/* Sidebar scrollbar style */
+.slide-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.slide-sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+.slide-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+.slide-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.light-theme .slide-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.1);
+}
+
+/* Slide digital card styles */
+#slide-digital-view ul {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#slide-digital-view li {
+    font-size: 13.5px;
+    color: var(--text-muted);
+}
+
+body.light-theme #slide-digital-view {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+    border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Mobile responsive layout for Slide Deck */
+@media (max-width: 768px) {
+    .slide-deck-body {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+    }
+    .slide-sidebar {
+        max-height: 180px !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    #slide-digital-view h3 {
+        font-size: 20px !important;
+    }
+}
+
+/* =============================================================
+   LIVE PROTOTYPE LOGINS SECTION STYLES
+   ============================================================= */
+.prototype-section {
+    background: rgba(7, 9, 14, 0.25);
+}
+
+body.light-theme .prototype-section {
+    background: rgba(241, 245, 249, 0.5);
+}
+
+.prototype-card {
+    transition: var(--transition-smooth);
+}
+
+.prototype-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px -5px rgba(0,0,0,0.3);
+}
+
+body.light-theme .prototype-card:hover {
+    box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.05);
+}
+
+/* Mobile responsive layout for Prototype Logins */
+@media (max-width: 1200px) {
+    .prototype-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .prototype-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
 }
 
 
